@@ -1,0 +1,44 @@
+{% extends 'portfolio/layout.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/estilos_projeto.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+<div class="content">
+  {% block content %}
+  <article> 
+      {% load static %}
+      <img id="image_article" src="{% static 'portfolio/images/empresa.jpg' %}" alt="">
+      <p><h1 class="titulo">{{projeto_PRJ2_projeto}} </h1></p>
+      <p>Django is the best framework for web applications, as it allows developers to use modules for faster development. As a developer, you can make use of these modules to create apps, websites from an existing source. It speeds up the development process greatly, as you do not have to code everything from scratch.
+  
+        Using Django, you can create professional web apps and websites in a short window. The platform is known for its advanced functionality like admin panels, authentication support, comment boxes, file upload support, contact forms, app management, and more.
+        
+        There is a large collection of modules that you can use for Django website development projects. It is among the best framework for web development, according to developers in the community due to its simplicity and rich pool of features.
+        
+        </p></article>
+       <article> <p>Since Django is written in pure Python, it was originally built around the Model View Controller (MVC) framework. The concept is still applicable in the current version of the framework, as well. But when it comes to Django, developers usually refer to the architecture of Django as Model View Template (MVT). Three distinct layers are responsible for supporting the architecture, and they can be used separately in Python Django framework.
+  
+        Models hold information about all your data, and they are represented using attributes/fields. Models have no information about Django layers.Communication between multiple layers is made possible only through an API.
+        
+        According to the official documentation, the Django model is designed to be a single source for all your data. 
+      </P>
+    </article>
+    <article>
+      <p class="titulo3">Cadeira</p>
+      <p class="discricao">{{projeto_PRJ2_cadeira}}</p>
+      <p class="titulo3">Semestre</p>
+      <p class="">{{projeto_PRJ2_semestre}}º</p>
+      <p class="titulo3">Sobre o projeto</p>
+      <p class="descricao">{{projeto_PRJ2_descricao}}</p>
+      <p class="titulo3">Ano de realização do projeto</p>
+      <p class=""> {{projeto_PRJ2_ano_frequentado}}</p>
+      <p class="titulo3">Aluno/s</p>
+      <p class="">Melkisidek Pedro Bequengue</p>
+      <p class="titulo3">Links</p>
+      <p class=""><a href="projeto_PRJ2_link_youtbe">Youtube</a></p>
+      <p class=""><a href="{{projeto_PRJ2_linK_GitHuB}}">Github</a></p>
+    </article>
+  {% endblock content %}
+

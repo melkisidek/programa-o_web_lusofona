@@ -1,0 +1,17 @@
+{% extends 'portfolio/layout.html' %}
+
+
+
+{% block content%}
+
+ {% for pessoa in pessoas %}
+
+ <div>
+    <h2>{{pessoa.LastName}}</h2>
+ </div>
+
+ {% endfor %}
+
+{% endblock content%}
+
+

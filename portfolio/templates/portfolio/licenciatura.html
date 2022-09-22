@@ -1,0 +1,81 @@
+{% extends 'portfolio/layout.html' %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/estilos_projeto.css' %}">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<style>
+   .checked {
+   color: orange;
+   }
+</style>
+
+
+
+{% block content %}
+	
+<div class="container">
+
+   <p class="titulo">Licenciatura</p>
+
+   
+
+   <div class="main_postal">
+    <div id="postal">
+      <img class="postal_image"src="{% static 'portfolio/images/conta.jpg' %}" alt="">
+     <p class="titulo2">{{contabilidade_cadeira}}</p>
+     <p class="titulo3">Ano da cadeira: </p>
+     <p>{{contabilidade_ano}}</p>
+     <p class="titulo3">Topicos abordados</p>
+     <p class="descricao">{{contabilidade_topico}}</p>
+     <p class="titulo3">Semestre</p>
+     <p class="discricao">{{contabilidade_semestre}}</p>
+     <p class="titulo3">Ano frequentado</p>
+     <p class="cadeira"> {{contabilidade_ano_frequentado}}</p>
+     <p class="titulo3">ECTS</p>
+     <p class="cadeira">{{contabilidade_ects}}</p>
+     <p class="titulo3">Professor/es</p>
+     <p class=""><a href="{{professor_PR1_link_pagina_lusofona}}">{{professor_PR1_nome}} {{professor_PR1_apelido}}</a>&nbsp;<a href="{{professor_PR1_linkedin}}"></a><a href="{{professor_PR1_linkedin}}"><img src="{% static 'portfolio/images/linkedin.png' %}" alt="" style="width:10%"></a><a href="{{professor_PR1_linkedin}}"></a> </p>
+     
+    </div>
+  
+    <div id="postal">
+      <img class="postal_image"src="{% static 'portfolio/images/empresa.jpg' %}" alt="">
+     <p class="titulo2">{{marketing_cadeira}}</p>
+     <p class="titulo3">Ano da cadeira: </p>
+     <p class="discricao">{{marketing_ano}}</p>
+     <p class="titulo3">Topicos abordados</p>
+     <p class="descricao">{{marketing_topico}}</p>
+     <p class="titulo3">Semestre</p>
+     <p class="discricao">{{marketing_semestre}}</p>
+     <p class="titulo3">Ano frequentado</p>
+     <p class="cadeira"> {{marketing_ano_frequentado}}</p>
+     <p class="titulo3">ECTS</p>
+     <p class="cadeira">{{marketing_ects}}</p>
+     <p class="titulo3">Professor/es</p>
+     <p class=""><a href="{{professor_PR3_link_pagina_lusofona}}">{{professor_PR2_nome}} {{professor_PR2_apelido}}</a>&nbsp;<a href="{{professor_PR3_linkedin}}"></a><a href="{{professor_PR2_linkedin}}"><img src="{% static 'portfolio/images/linkedin.png' %}" alt="" style="width:10%"></a><a href="{{professor_PR2_linkedin}}"></a> </p>
+     
+    </div>
+
+    <div id="postal">
+      <img class="postal_image"src="{% static 'portfolio/images/web.jpg' %}" alt="">
+     <p class="titulo2">{{programaca_web_cadeira}}</p>
+     <p class="titulo3">Ano da cadeira: </p>
+     <p class="discricao">{{programaca_web_ano}}</p>
+     <p class="titulo3">Topicos abordados</p>
+     <p class="descricao">{{programaca_web_topico}}</p>
+     <p class="titulo3">Semestre</p>
+     <p class="discricao">{{programaca_web_semestre}}</p>
+     <p class="titulo3">Ano frequentado</p>
+     <p class="cadeira">{{programaca_web_ano_frequentado}}</p>
+     <p class="titulo3">ECTS</p>
+     <p class="cadeira">{{programaca_web_ects}}</p>
+     <p class="titulo3">Professor/es</p>
+     <p class=""><a href="{{professor_PR2_link_pagina_lusofona}}">{{professor_PR3_nome}} {{professor_PR3_apelido}}</a>&nbsp;<a href="{{professor_PR2_linkedin}}"></a><a href="{{professor_PR3_linkedin}}"><img src="{% static 'portfolio/images/linkedin.png' %}" alt="" style="width:10%"></a><a href="{{professor_PR3_linkedin}}"></a> </p>
+     
+    </div>
+
+   </div>
+   {% endblock content%}

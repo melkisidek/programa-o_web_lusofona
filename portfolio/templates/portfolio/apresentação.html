@@ -1,0 +1,95 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    
+    {% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/style33.css'%}">
+    <title>Trabalho de programação web</title>
+
+</head>
+<body>
+
+    <div id="top_nav"><ul>
+      <li><a href="{% url 'portfolio:home' %}">Melkisidek Pedro Bequengue</a></li>
+        <li><a href="{% url 'portfolio:home' %}">home</a></li>
+        <li><a href="{% url 'portfolio:apresentacao' %}">Sobre mim</a></li>
+        <li><a href="{% url 'portfolio:sobre' %}">sobre</a></li>
+        
+        <li><a href="{% url 'portfolio:projetos' %}">projetos</a></li>
+        <li><a href="{% url 'portfolio:licenciatura' %}">licenciatura</a></li>
+        <li><a href="{% url 'portfolio:tfc' %}">tfc</a></li>
+
+        <li><a href="{% url 'portfolio:blog' %}">blog</a></li>
+      
+        
+        <li><a href="{% url 'portfolio:programacao_web' %}">Programação web</a></li>
+        <li><a href="{% url 'portfolio:quiz' %}">quiz</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'users:logout' %}">logout</a></li>
+        {% else %}
+        <li><a href="{% url 'users:login' %}">login</a></li>
+        {% endif %}
+      </ul></div> 
+        
+      
+    <div id="header">
+     
+        <div class="lema">your<br> dreams <br>our <br>commitment<br>
+    
+            We get it done </div>
+       
+       
+ 
+    </div>
+    
+     
+    <div class="content_landpage">
+  
+  
+  
+        <article> <img id="image_landpage" src="{% static 'portfolio/images/me.jpg' %}" alt="">
+          <p><h1 class="titulo">About me</h1></p>
+          <p>Django is the best framework for web applications, as it allows developers to use modules for faster development. As a developer, you can make use of these modules to create apps, websites from an existing source. It speeds up the development process greatly, as you do not have to code everything from scratch.
+      
+            Using Django, you can create professional web apps and websites in a short window. The platform is known for its advanced functionality like admin panels, authentication support, comment boxes, file upload support, contact forms, app management, and more.
+            
+            There is a large collection of modules that you can use for Django website development projects. 
+            </p></article>
+
+            <p> Licenciatura: <a href="{% url 'portfolio:licenciatura' %}"> Informatica de Gestão</a> Universidade Lusófona</p>
+            <p> Ensino Secundário: Escola Secundária Dr. José Afonso  e lycée français rené goscinny varsovie</p>
+            <p> Linguas: Francês, Inglês e Polaco</p>
+            <p>hobbies: Futesal e Biking</p>
+           
+           
+           
+        
+            
+         
+        <div class="titulo2"><h1>Contact us</h1></div>
+      
+              <div class="contact_us">
+                
+      <form class="cf">
+        <div class="half left cf">
+          <input type="text" id="input-name" placeholder="Name">
+          <input type="text" id="input-email" placeholder="Email address">
+          <input type="text" id="input-subject" placeholder="Subject">
+        </div>
+        <div class="half right cf">
+          <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+        </div>  
+        <input type="submit" value="Submit" id="input-submit">
+      </form>
+                
+                </div>
+      
+      </div>
+    
+    
+    <footer><p>Melkisidek Pedro Bequengue aluno 20062100 - programação web - Informatica de gestão - 2022 e-mail: melkisidek@gmail.com</p></footer>
+
+</body>
+</html>

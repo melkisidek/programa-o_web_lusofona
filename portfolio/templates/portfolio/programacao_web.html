@@ -1,0 +1,138 @@
+{% extends 'portfolio/layout.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/estilos_projeto.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+{% block content %}
+
+<div class="container">
+
+    <p class="titulo">Programação Web</p>
+
+    <p class="titulo2">Back end</p>
+    <article>{% load static %}
+        <img id="image_article" src="{% static 'portfolio/images/backend.jpeg' %}" alt="">
+    <p>Como o nome sugere, o desenvolvedor back-end trabalha na parte de “trás” da aplicação. Ele é o responsável, em termos gerais, pela implementação da regra de negócio.
+
+        Em uma aplicação web, este desenvolvedor, quando focado, não toca na parte visual da aplicação. Por lidar com a regra de negócio, as vezes um programador de sistemas, como de aplicações comerciais e até científicas, pode ser chamado de desenvolvedor back-end. E geralmente, nessas aplicações, este desenvolvedor trabalha um pouco com a parte visual. 
+        Por isso, para este artigo, o desenvolvedor back-end levado em conta, é o desenvolvedor de aplicações web.</p>
+
+    </article>
+
+    <p class="titulo3">As 10 melhores frameworks de back-end para desenvolvimento  web</p>
+
+    <table align="center">
+        <tr><th>Framework</th>
+            <th>Programming Language	</th>
+            <th>Famous Use Cases</th> 
+    
+    </tr>
+    <tr><td>Django</td>
+        <td>Python</td>
+        <td>Instagram</td>
+    </tr>
+    <tr><td>ExpressJS</td>
+        <td>NodeJS</td>
+        <td>GeekList</td>
+    </tr>
+    <tr><td>Laravel</td>
+        <td>PHP</td>
+        <td>Deltanet Travel</td>
+    </tr>
+    <tr><td>Ruby on Rails</td>
+        <td>Python</td>
+        <td>ZendDesk</td>
+    </tr>
+    <tr><td>CakePHP</td>
+        <td>PHP</td>
+        <td>Educationunlimited</td>
+    </tr>
+    <tr><td>Flask</td>
+        <td>Python</td>
+        <td>Reddit</td>
+    </tr>
+    <tr><td>Asp .NET</td>
+        <td>C#</td>
+        <td>Microsoft</td>
+    </tr>
+    <tr><td>Spring Boot</td>
+        <td>Java</td>
+        <td>Trivago</td>
+    </tr>
+    <tr><td>Koa</td>
+        <td>NodeJS</td>
+        <td>-</td>
+    </tr>
+    <tr><td>Phoenix</td>
+        <td>Elixir</td>
+        <td>Financial Times</td>
+    </tr>
+    </table>
+
+    <p class="titulo2">Front end</p>
+
+    <article>{% load static %}
+        <img id="image_article" src="{% static 'portfolio/images/frontend.jpg' %}" alt="">
+        O desenvolvedor front-end é responsável por “dar vida” à interface. Trabalha com a parte da aplicação que interage diretamente com o usuário.
+         Por isso, é importante que esse desenvolvedor também se preocupe com a experiência do usuário.
+    </article>
+
+
+
+    <p class="titulo3">As 10 melhores frameworks de front-end para desenvolvimento  web</p>
+
+    <table align="center">
+        <tr><th>Framework</th>
+            <th>Companies Uses</th>
+           
+    </tr>
+    <tr><td>React Framework</td>
+        <td>Airbnb</td>
+     
+    </tr>
+    <tr><td>Angular Framework</td>
+        <td>Gmail</td>
+       
+    </tr>
+    <tr><td>Vue.js Framework</td>
+        <td>Nintendo</td>
+        
+    </tr>
+    <tr><td>Ember.js</td>
+        <td>LinkedIn</td>
+        
+    </tr>
+    <tr><td>jQuery</td>
+        <td>JPMorgan Chase</td>
+      
+    </tr>
+    <tr><td>Semantic-UI Framework</td>
+        <td>Accenture</td>
+      
+    </tr>
+    <tr><td>Backbone.js</td>
+        <td>University of California</td>
+        
+    </tr>
+    <tr><td>Preact Framework</td>
+        <td>-</td>
+      
+    </tr>
+    <tr><td>Svelte Framework</td>
+        <td>Capital One</td>
+        
+    </tr>
+    <tr><td>Phoenix</td>
+        <td>Elixir</td>
+        <td>Financial Times</td>
+    </tr>
+    </table>
+
+   
+
+{% endblock %}
+
+</div>
+

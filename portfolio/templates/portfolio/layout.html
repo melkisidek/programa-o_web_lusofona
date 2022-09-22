@@ -1,0 +1,145 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    
+    {% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/style22.css'%}">
+    <title>Trabalho de programação web</title>
+
+</head>
+<body>
+
+    <div id="top_nav"><ul>
+      <li><a href="{% url 'portfolio:home' %}">Melkisidek Pedro Bequengue</a></li>
+        <li><a href="{% url 'portfolio:home' %}">home</a></li>
+        <li><a href="{% url 'portfolio:apresentacao' %}">Sobre min</a></li>
+        <li><a href="{% url 'portfolio:sobre' %}">sobre</a></li>
+       
+        
+      
+        <li><a href="{% url 'portfolio:projetos' %}">projetos</a></li>
+        <li><a href="{% url 'portfolio:licenciatura' %}">licenciatura</a></li>
+       
+        <li><a href="{% url 'portfolio:tfc' %}">tfc</a></li>
+        <li><a href="{% url 'portfolio:blog' %}">blog</a></li>
+        
+        <li><a href="{% url 'portfolio:programacao_web' %}">Programação web</a></li>
+        
+        <li><a href="{% url 'portfolio:quiz' %}">quiz</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'users:logout' %}">logout</a></li>
+        {% else %}
+        <li><a href="{% url 'users:login' %}">login</a></li>
+        {% endif %}
+
+        
+      </ul></div> 
+    
+      
+      
+      
+    
+      
+    <div id="header">
+ 
+    </div>
+    
+     
+    <div class="content">
+        {% block content %}
+        <article> 
+            {% load static %}
+            <img id="image_article" src="{% static 'portfolio/images/django.jpg' %}" alt="">
+            <p><h1 class="titulo">5+ Reasons Why Django is the Best Web Framework For Your Project </h1></p>
+            <p>Django is the best framework for web applications, as it allows developers to use modules for faster development. As a developer, you can make use of these modules to create apps, websites from an existing source. It speeds up the development process greatly, as you do not have to code everything from scratch.
+        
+              Using Django, you can create professional web apps and websites in a short window. The platform is known for its advanced functionality like admin panels, authentication support, comment boxes, file upload support, contact forms, app management, and more.
+              
+              There is a large collection of modules that you can use for Django website development projects. It is among the best framework for web development, according to developers in the community due to its simplicity and rich pool of features.
+              
+              </p></article>
+             <article> <p>Since Django is written in pure Python, it was originally built around the Model View Controller (MVC) framework. The concept is still applicable in the current version of the framework, as well. But when it comes to Django, developers usually refer to the architecture of Django as Model View Template (MVT). Three distinct layers are responsible for supporting the architecture, and they can be used separately in Python Django framework.
+        
+              Models hold information about all your data, and they are represented using attributes/fields. Models have no information about Django layers.Communication between multiple layers is made possible only through an API.
+              
+              According to the official documentation, the Django model is designed to be a single source for all your data. 
+            </P>
+          </article>
+        {% endblock content %}
+
+        <div class="main_postal">
+            <br>
+            <div id="link_de_acess_rapido">
+              <p class="titulo2">Curso</p>
+              <p> <a class="linkdecoration" href="https://www.ulusofona.pt/licenciaturas/informatica-de-gestao">Informatica de gestão</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica">Licenciatura em Engenharia Informática</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/computacao-e-matematica-aplicada">Computação e Matemática Aplicada</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica-redes-e-telecomunicacoes">Licenciatura em Engenharia Informática, Redes e Telecomunicações</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/ciencia-de-dados">Ciência de Dados</a></p>
+         
+            
+            </div>
+            
+            <div id="link_de_acess_rapido">
+              <p class="titulo2">Projetos</p>
+              <p> <a class="linkdecoration" href="https://www.ulusofona.pt/licenciaturas/informatica-de-gestao">Informatica de gestão</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica">Licenciatura em Engenharia Informática</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/computacao-e-matematica-aplicada">Computação e Matemática Aplicada</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica-redes-e-telecomunicacoes">Licenciatura em Engenharia Informática, Redes e Telecomunicações</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/ciencia-de-dados">Ciência de Dados</a></p>
+         
+            </div>
+            
+            <div id="link_de_acess_rapido">
+              <p class="titulo2">Blog</p>
+              <p> <a class="linkdecoration" href="https://www.ulusofona.pt/licenciaturas/informatica-de-gestao">Informatica de gestão</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica">Licenciatura em Engenharia Informática</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/computacao-e-matematica-aplicada">Computação e Matemática Aplicada</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica-redes-e-telecomunicacoes">Licenciatura em Engenharia Informática, Redes e Telecomunicações</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/ciencia-de-dados">Ciência de Dados</a></p>
+              
+            </div>
+            
+            
+            <div id="link_de_acess_rapido">
+              <p class="titulo2">Quiz</p>
+              <p> <a class="linkdecoration" href="https://www.ulusofona.pt/licenciaturas/informatica-de-gestao">Informatica de gestão</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica">Licenciatura em Engenharia Informática</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/computacao-e-matematica-aplicada">Computação e Matemática Aplicada</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica-redes-e-telecomunicacoes">Licenciatura em Engenharia Informática, Redes e Telecomunicações</a></p>
+              <p> <a class="linkdecoration"href="https://www.ulusofona.pt/licenciaturas/ciencia-de-dados">Ciência de Dados</a></p>
+          
+            </div>
+            
+            
+            
+            
+            </div>
+       
+            <div class="titulo2"><h1>Contact us</h1></div>
+    
+            <div class="contact_us">
+              
+    <form class="cf">
+      <div class="half left cf">
+        <input type="text" id="input-name" placeholder="Name">
+        <input type="text" id="input-email" placeholder="Email address">
+        <input type="text" id="input-subject" placeholder="Subject">
+      </div>
+      <div class="half right cf">
+        <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+      </div>  
+      <input type="submit" value="Submit" id="input-submit">
+    </form>
+              
+              </div>
+    
+    </div>
+    
+    
+    <footer><p>Melkisidek Pedro Bequengue aluno 20062100 - programação web - Informatica de gestão - 2022 e-mail: melkisidek@gmail.com</p></footer>
+
+</body>
+</html>

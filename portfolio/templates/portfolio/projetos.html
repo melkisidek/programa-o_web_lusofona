@@ -1,0 +1,90 @@
+{% extends 'portfolio/layout.html' %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/estilos_projeto.css' %}">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<style>
+   .checked {
+   color: orange;
+   }
+</style>
+
+
+
+{% block content %}
+	
+
+
+<div class="container">
+
+
+   <p class="titulo">Projetos</p>
+   <div class="main_postal">
+     <div id="postal">
+       <img class="postal_image"src="{% static 'portfolio/images/marketing.png' %}" alt="">
+       
+      <a href="{% url 'portfolio:projetoA' %}"><p class="titulo2b">{{projeto_PRJ1_projeto}}</p></a>
+      <p class="titulo3">Cadeira</p>
+      <p class="discricao">{{projeto_PRJ1_cadeira}}</p>
+      <p class="titulo3">Semestre</p>
+      <p class="">{{projeto_PRJ1_semestre}}º</p>
+      <p class="titulo3">Sobre o projeto</p>
+      <p class="descricao">{{projeto_PRJ1_descricao}}</p>
+      <p class="titulo3">Ano de realização do projeto</p>
+      <p class=""> {{projeto_PRJ1_ano_frequentado}}</p>
+      <p class="titulo3">Aluno/s</p>
+      <p class="">Melkisidek Pedro Bequengue</p>
+      <p class="titulo3">Links</p>
+      <p class=""><a href="projeto_PRJ1_link_youtbe">Youtube</a></p>
+      <p class=""><a href="{{projeto_PRJ1_linK_GitHuB}}">Github</a></p>
+   </div>
+
+
+   <div id="postal">
+    <img class="postal_image"src="{% static 'portfolio/images/empresa.jpg' %}" alt="">
+    
+    <a href="{% url 'portfolio:projetoB' %}"><p class="titulo2b">{{projeto_PRJ2_projeto}}</p></a>
+   <p class="titulo3">Cadeira</p>
+   <p class="discricao">{{projeto_PRJ2_cadeira}}</p>
+   <p class="titulo3">Semestre</p>
+   <p class="">{{projeto_PRJ2_semestre}}º</p>
+   <p class="titulo3">Sobre o projeto</p>
+   <p class="descricao">{{projeto_PRJ2_descricao}}</p>
+   <p class="titulo3">Ano de realização do projeto</p>
+   <p class=""> {{projeto_PRJ2_frequentado}}</p>
+   <p class="titulo3">Aluno/s</p>
+   <p class="">Melkisidek Pedro Bequengue</p>
+   <p class="titulo3">Links</p>
+   <p class=""><a href="projeto_PRJ1_link_youtbe">Youtube</a></p>
+   <p class=""><a href="{{projeto_PRJ1_linK_GitHuB}}">Github</a></p>
+</div>
+
+
+<div id="postal">
+  <img class="postal_image"src="{% static 'portfolio/images/django.png' %}" alt="">
+  
+  <a href="{% url 'portfolio:projetoC' %}"><p class="titulo2b">{{projeto_PRJ3_projeto}}</p></a>
+ <p class="titulo3">Cadeira</p>
+ <p class="discricao">{{projeto_PRJ3_cadeira}}</p>
+ <p class="titulo3">Semestre</p>
+ <p class="">{{projeto_PRJ3_semestre}}º</p>
+ <p class="titulo3">Sobre o projeto</p>
+ <p class="descricao">{{projeto_PRJ3_descricao}}</p>
+ <p class="titulo3">Ano de realização do projeto</p>
+ <p class=""> {{projeto_PRJ3_frequentado}}</p>
+ <p class="titulo3">Aluno/s</p>
+ <p class="">Melkisidek Pedro Bequengue</p>
+ <p class="titulo3">Links</p>
+ <p class=""><a href="projeto_PRJ1_link_youtbe">Youtube</a></p>
+ <p class=""><a href="{{projeto_PRJ1_linK_GitHuB}}">Github</a></p>
+</div>
+
+   
+   
+</div>
+
+   
+  
+   {% endblock content%}

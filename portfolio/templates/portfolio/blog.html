@@ -1,0 +1,52 @@
+{% extends 'portfolio/layout.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/estilos_projeto.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+{% block content %}
+
+<div class="container">
+
+    <p class="titulo">Meu Blog</p>
+
+    {% if user.is_authenticated %}
+    {% for post in posts %}
+        <p>
+    
+               <p class="titulo3">{{ post.titulo }}</p> 
+              
+                
+
+            <a href="{% url 'portfolio:edita' post.id %}" class="btn btn-warning  btn-sm" style="float: right; margin-right: 10px">
+                Editar
+            </a>
+        </p>
+   {% endfor %}
+        <a href="{% url 'portfolio:novo'%}" class="btn btn-success btn-block">+ Novo post</a>
+
+
+    {% else%}
+
+         {% for post in posts %}
+             
+         <p class="titulo2">{{ post.titulo }}</p>
+
+         <p class="descricao">{{ post.descricao}}</p>
+
+         <p class="descricao">Autor:{{ post.autor}}</p>
+         <p class="descricao">Data:{{ post.data}}</p>
+         
+           
+            
+        {% endfor %}
+         
+      
+{% endif %}
+
+{% endblock %}
+
+</div>
+
+
